@@ -39,4 +39,24 @@ class Bananas extends Component {
   }
 }
 
-AppRegistry.registerComponent('AwesomeProject', () => Bananas);
+class Greeting extends Component {
+  render() {
+    return (
+      <Text>Hello {this.props.name}!</Text>
+    )
+  }
+}
+
+class LotsOfGreetings extends Component {
+  render() {
+    return (
+      <View style={{alignItems: 'center'}}>
+        <Greeting name='Rexxar'/>
+        <Greeting name='Jaina'/>
+        <Greeting name='Vallera'/>
+      </View>
+    )
+  }
+}
+
+AppRegistry.registerComponent('AwesomeProject', () => LotsOfGreetings);
