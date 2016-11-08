@@ -239,4 +239,27 @@ class IScolledDownAndWhatHappenedNextShockedMe extends Component {
   }
 }
 
-AppRegistry.registerComponent('AwesomeProject', () => IScolledDownAndWhatHappenedNextShockedMe);
+class ListViewBasics extends Component {
+  constructor(props) {
+    super(props);
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    this.state = {
+      dataSource: ds.cloneWithRows([
+        'John','Joel','James','Jimmy','Jackson','Jillian','Julie','Devin'
+      ])
+    }
+  }
+
+  render() {
+    return (
+      <View style={{paddingTop: 22, flex: 1}}>
+        <ListView
+          dataSource={this.state.dataSource}
+          renderRow={(rowData) => <Text style={{fontSize: 80}}>{rowData}</Text>}
+          />
+      </View>
+    )
+  }
+}
+
+AppRegistry.registerComponent('AwesomeProject', () => ListViewBasics);
