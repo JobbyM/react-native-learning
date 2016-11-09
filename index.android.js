@@ -262,4 +262,12 @@ class ListViewBasics extends Component {
   }
 }
 
+class YoDawgApp extends Component {
+  render() {
+    return (
+      <MyScene />
+    )
+  }
+}
+
 AppRegistry.registerComponent('AwesomeProject', () => ListViewBasics);
