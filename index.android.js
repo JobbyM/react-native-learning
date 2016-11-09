@@ -270,4 +270,4 @@ class YoDawgApp extends Component {
   }
 }
 
-AppRegistry.registerComponent('AwesomeProject', () => ListViewBasics);
+AppRegistry.registerComponent('AwesomeProject', () => YoDawgApp);
